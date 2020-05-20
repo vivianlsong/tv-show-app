@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 import { PeoplesearchComponent } from './peoplesearch/peoplesearch.component';
 import { HttpClientModule} from '@angular/common/http';
 import { PeopleserviceService } from './peopleservice.service';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleService } from './scheduleservice.service';
+
 @NgModule({
   declarations: [
     AppComponent,
-    PeoplesearchComponent
+    PeoplesearchComponent,
+    ScheduleComponent
+
   ],
   imports: [
     BrowserModule,
@@ -17,7 +22,8 @@ import { PeopleserviceService } from './peopleservice.service';
     HttpClientModule
 
   ],
-  providers: [PeopleserviceService],
+  providers: [PeopleserviceService,
+  ScheduleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

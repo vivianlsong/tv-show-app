@@ -1,13 +1,21 @@
 
-<body>
 <div style="text-align: center;">
   <h1>Show-App</h1>
 
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#about">About</a>
     <a href="#about">People</a>
     <a href="#about">Schedule</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories</button>
+      <div class="dropdown-content">
+        <a href="#">Action</a>
+        <a href="#">Thriller</a>
+        <a href="#">Comedy</a>
+        <a href="#">Romantic</a>
+</div>
+    </div>
+
+
     <input type="text" placeholder="Search for Shows, Schedule, People" />
 
     <div class="login-container">
@@ -15,9 +23,14 @@
         <button type="submit">Register</button>
         <button type="submit">SignIn</button>
       </form>
-    </div>
 
-      </div>
-    </div>
-  </body>
+</div>
+</div>
+  <app-peoplesearch></app-peoplesearch>
+  <app-schedule></app-schedule>
+
+</div>
+
+
+
 
