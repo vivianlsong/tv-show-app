@@ -6,18 +6,21 @@ import { AppComponent } from './app.component';
 import { ShowComponent } from './show/show.component';
 import { TvshowService } from './tvshow.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PeoplesearchComponent } from './peoplesearch/peoplesearch.component';
+import { PeopleserviceService } from './peopleservice.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent
+    PeoplesearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TvshowService],
-  bootstrap: [AppComponent]
+  providers: [TvshowService, PeopleserviceService],
+  bootstrap: [AppComponent] 
 })
 export class AppModule { }
