@@ -12,7 +12,7 @@ import { PeopleserviceService } from './peopleservice.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ShowComponent
+    ShowComponent,
     PeoplesearchComponent
   ],
   imports: [
@@ -21,6 +21,6 @@ import { PeopleserviceService } from './peopleservice.service';
     HttpClientModule
   ],
   providers: [TvshowService, PeopleserviceService],
-  bootstrap: [AppComponent] 
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
