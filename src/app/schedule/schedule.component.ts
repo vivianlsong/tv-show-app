@@ -5,18 +5,17 @@ import { ScheduleService } from '../scheduleservice.service';
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
-  styleUrls: ['./schedule.component.css']
+  styleUrls: ['./schedule.component.css'],
 })
 export class ScheduleComponent implements OnInit {
- sched: Ischedule
-  constructor(private scheduleservice: ScheduleService) { }
+  schedules: Ischedule[];
+  constructor(private scheduleservice: ScheduleService) {}
 
   ngOnInit(): void {
     this.scheduleservice
       .getSchedule('US', '2014-12-01')
-      .subscribe((data) => {
-        this.sched = data[0];}
-        );
+      .subscribe((data: Ischedule[]) => {
+        this.schedules = data || [];
+      });
   }
-
 }

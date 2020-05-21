@@ -1,15 +1,26 @@
-<h3>show schedule.</h3>
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Language</td>
+    <td>Runtime</td>
+    <td>Image</td>
+    <td>Channel</td>
+    <td>summary</td>
+  </tr>
 
-<div><span>Name: {{sched.name}}</span></div>
-<div>
-<span>Language: {{sched.language}}</span><br>
-<span>Runtime: {{sched.runtime}}</span>
-</div>
-<div>
-<img [src]="sched.image"/>
-</div>
-
-<div>
-  <span>Channel:{{sched.channel}},Summary:{{sched.description}}</span>
-</div>
-
+  <tr *ngFor="let sched of schedules">
+    <td>
+      <<span>{{ sched.name }}</span>
+    </td>
+    <td></td>
+    <td>
+      <span>{{ sched.language }}</span>
+    </td>
+    <td>
+      <span>{{ sched.runtime }}</span>
+    </td>
+    <td><img [src]="sched.image" /></td>
+    <td>{{ sched.channel }}</td>
+    <td>{{ sched.description }}</td>
+  </tr>
+</table>
