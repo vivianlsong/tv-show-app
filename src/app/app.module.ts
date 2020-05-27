@@ -20,11 +20,13 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: 'home', component: ShowSearchComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'shows', component: TvAppComponent},
-  {path: 'people', component: PeoplesearchComponent}
+  {path: 'people', component: PeoplesearchComponent},
+  {path: 'schedule', component: ScheduleComponent}
 ];
 
 @NgModule({
@@ -32,7 +34,9 @@ const routes: Routes = [
     AppComponent,
     PeoplesearchComponent,
     ScheduleComponent,
-    TvAppComponent
+    TvAppComponent,
+    ShowSearchComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
