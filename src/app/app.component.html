@@ -1,13 +1,13 @@
 <body>
 
   <div style="text-align: center;">
-  <h1>Show-App</h1>
+  <h1>KAV TV App</h1>
 
   <div class="topnav">
-    <a class="active" href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#about">People</a>
-    <a href="#about">Schedule</a>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/shows" routerLinkActive="active">Shows</a>
+    <a routerLink="/people" routerLinkActive="active">People</a>
+    <a href="schedule">Schedule</a>
     <input type="text" placeholder="Search for Shows, Schedule, People" />
 
     <div class="login-container">
@@ -19,6 +19,12 @@
   </div>
 </div>
 
+  <div style = "text-align: center;">
+    <br>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- testing routing buttons
 <div fxLayoutAlign="center">
   <app-show-search></app-show-search>
 </div>
@@ -27,5 +33,7 @@
 <app-tv-app></app-tv-app>
 <app-peoplesearch></app-peoplesearch>
 </div>
+-->
+
 
 </body>

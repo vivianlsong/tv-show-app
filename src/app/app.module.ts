@@ -17,6 +17,13 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  {path: 'home', component: ShowSearchComponent},
+  {path: 'shows', component: TvAppComponent},
+  {path: 'people', component: PeoplesearchComponent}
+];
 
 @NgModule({
   declarations: [
@@ -37,8 +44,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatIconModule,
     MatInputModule,
     FormsModule,
-    ReactiveFormsModule
-  ],
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes)
+    ],
   providers: [PeopleserviceService, TvService],
   bootstrap: [AppComponent]
 })
