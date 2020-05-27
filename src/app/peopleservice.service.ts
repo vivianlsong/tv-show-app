@@ -28,10 +28,15 @@ interface IActorSearchResult {
 export class PeopleserviceService {
   constructor(private httpClient: HttpClient) {}
 
-  getPeopleSearch(name: string): Observable<Ipeoplesearch[]> {
+  getPeopleSearch(search: string): Observable<Ipeoplesearch[]> {
+    let uriParams = '';
+    if (typeof search === 'string') {
+      uriParams = `q=${search}`
+    }
+
     return this.httpClient
       .get<IActorSearchResult[]>(
-        `${environment.baseUrl}api.tvmaze.com/search/people?q=${name}`
+        `${environment.baseUrl}api.tvmaze.com/search/people?${uriParams}`
       )
       .pipe(map((data) => this.transformToIpeoplesearch(data)));
   }

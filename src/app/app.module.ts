@@ -8,17 +8,36 @@ import { PeoplesearchComponent } from './peoplesearch/peoplesearch.component';
 import { PeopleserviceService } from './peopleservice.service';
 import { TvAppComponent } from './tv-app/tv-app.component';
 import { TvService } from './tv.service';
+import { ShowSearchComponent } from './show-search/show-search.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     PeoplesearchComponent,
-    TvAppComponent
+    TvAppComponent,
+    ShowSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [PeopleserviceService, TvService],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 <body>
-<div style="text-align: center;">
+
+  <div style="text-align: center;">
   <h1>Show-App</h1>
 
   <div class="topnav">
@@ -15,13 +16,16 @@
         <button type="submit">SignIn</button>
       </form>
     </div>
-
-      </div>
-    </div>
-  </body>
-
-  <br>
-  <div style = "text-align: center;">
-  <app-tv-app></app-tv-app>
-  <app-peoplesearch></app-peoplesearch>
   </div>
+</div>
+
+<div fxLayoutAlign="center">
+  <app-show-search></app-show-search>
+</div>
+
+<div style = "text-align: center;">
+<app-tv-app></app-tv-app>
+<app-peoplesearch></app-peoplesearch>
+</div>
+
+</body>
