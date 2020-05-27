@@ -22,12 +22,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
-const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  {path: 'shows', component: TvAppComponent},
-  {path: 'people', component: PeoplesearchComponent},
-  {path: 'schedule', component: ScheduleComponent}
-];
+const routes: Routes = [];
 
 @NgModule({
   declarations: [
