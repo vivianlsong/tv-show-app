@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PeoplesearchComponent } from './peoplesearch/peoplesearch.component';
 import { PeopleserviceService } from './peopleservice.service';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { ScheduleService } from './scheduleservice.service';
 import { TvAppComponent } from './tv-app/tv-app.component';
 import { TvService } from './tv.service';
 import { ShowSearchComponent } from './show-search/show-search.component';
@@ -29,8 +31,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     PeoplesearchComponent,
-    TvAppComponent,
-    ShowSearchComponent
+    ScheduleComponent,
+    TvAppComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(routes)
     ],
-  providers: [PeopleserviceService, TvService],
+  providers: [PeopleserviceService, ScheduleService, TvService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

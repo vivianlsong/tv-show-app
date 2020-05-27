@@ -1,0 +1,26 @@
+<table border="1">
+  <tr>
+    <td>Name</td>
+    <td>Language</td>
+    <td>Runtime</td>
+    <td>Image</td>
+    <td>Channel</td>
+    <td>summary</td>
+  </tr>
+
+  <tr *ngFor="let sched of schedules">
+    <td>
+      <<span>{{ sched.name }}</span>
+    </td>
+    <td></td>
+    <td>
+      <span>{{ sched.language }}</span>
+    </td>
+    <td>
+      <span>{{ sched.runtime }}</span>
+    </td>
+    <td><img [src]="sched.image" /></td>
+    <td>{{ sched.channel }}</td>
+    <td>{{ sched.description }}</td>
+  </tr>
+</table>
