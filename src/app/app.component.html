@@ -1,35 +1,37 @@
 <body>
+
   <div style="text-align: center;">
-    <h1>Show-App</h1>
+  <h1>KAV TV App</h1>
 
-    <div class="topnav">
-      <a href="#about">People</a>
-      <a href="#about">Schedule</a>
-      <div class="dropdown">
-        <button class="dropbtn">Categories</button>
-        <div class="dropdown-content">
-          <a href="#">Action</a>
-          <a href="#">Thriller</a>
-          <a href="#">Comedy</a>
-          <a href="#">Romantic</a>
-        </div>
-      </div>
-
-      <input type="text" placeholder="Search for Shows, Schedule, People" />
+  <div class="topnav">
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/shows" routerLinkActive="active">Shows</a>
+    <a routerLink="/people" routerLinkActive="active">People</a>
+    <a routerLink="/schedule" routerLinkActive="active">Schedule</a>
+    <!--<input type="text" placeholder="Search for Shows, Schedule, People" />-->
 
       <div class="login-container">
-        <form action=" ">
-          <button type="submit">Register</button>
-          <button type="submit">SignIn</button>
-        </form>
-      </div>
-
+      <form action=" ">
+        <button type="submit">Register</button>
+        <button type="submit">SignIn</button>
+      </form>
     </div>
-
-    <br>
-    <app-tv-app></app-tv-app>
-    <app-peoplesearch></app-peoplesearch>
-    <app-schedule></app-schedule>
-
   </div>
+</div>
+
+  <div style = "text-align: center;">
+    <br>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- testing routing buttons
+<div fxLayoutAlign="center">
+  <app-show-search></app-show-search>
+</div>
+<div style = "text-align: center;">
+<app-tv-app></app-tv-app>
+<app-peoplesearch></app-peoplesearch>
+</div>
+-->
+
 </body>

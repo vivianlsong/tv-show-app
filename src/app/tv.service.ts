@@ -45,9 +45,13 @@ export class TvService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getTvapp(name: string){
+  getTvapp(search: string){
+    let uriParams = '';
+    if (typeof search === 'string') {
+      uriParams = `q=${search}`
+    }
     return this.httpClient.get<ITvdata>(
-     `${environment.baseUrl}/api.tvmaze.com/singlesearch/shows?q=${name}&embed=episodes&appid=${environment.appId}`)
+     `${environment.baseUrl}/api.tvmaze.com/singlesearch/shows?${uriParams}&embed=episodes&appid=${environment.appId}`)
      .pipe(
        map(data => this.transformToITvapp(data))
      )
