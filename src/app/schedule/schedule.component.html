@@ -1,26 +1,34 @@
-<table border="1">
+<h1>Today's Show Schedule</h1>
+
+<table border="1" align="center">
   <tr>
-    <td>Name</td>
-    <td>Language</td>
-    <td>Runtime</td>
-    <td>Image</td>
-    <td>Channel</td>
-    <td>summary</td>
+    <td><b>Show Name</b></td>
+    <td><b>Episode Name</b></td>
+    <td><b>Image</b></td>
+    <td><b>Time</b></td>
+    <td><b>Season</b></td>
+    <td><b>Episode</b></td>
   </tr>
 
   <tr *ngFor="let sched of schedules">
+
     <td>
-      <<span>{{ sched.name }}</span>
-    </td>
-    <td></td>
-    <td>
-      <span>{{ sched.language }}</span>
+      <span>{{ sched.show_name }}</span>
     </td>
     <td>
-      <span>{{ sched.runtime }}</span>
+      <span>{{ sched.ep_name }}</span>
     </td>
     <td><img [src]="sched.image" /></td>
-    <td>{{ sched.channel }}</td>
-    <td>{{ sched.description }}</td>
+    <td>
+      <span>{{ sched.time }}</span>
+    </td>
+    <td>
+      <span>{{ sched.season }}</span>
+    </td>
+    <td>
+      <span>{{ sched.ep_number }}</span>
+    </td>
+
   </tr>
 </table>
+
