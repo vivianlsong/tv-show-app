@@ -2,25 +2,19 @@
 
 <table border="1" align="center">
   <tr>
-    <td><b>Show Name</b></td>
-    <td><b>Episode Name</b></td>
-    <td><b>Image</b></td>
     <td><b>Time</b></td>
+    <td><b>Show Name</b></td>
     <td><b>Season</b></td>
     <td><b>Episode</b></td>
+    <td><b>Episode Name</b></td>
   </tr>
 
   <tr *ngFor="let sched of schedules">
-
-    <td>
-      <span>{{ sched.show_name }}</span>
-    </td>
-    <td>
-      <span>{{ sched.ep_name }}</span>
-    </td>
-    <td><img [src]="sched.image" /></td>
     <td>
       <span>{{ sched.time }}</span>
+    </td>
+    <td>
+      <span>{{ sched.show_name }}</span>
     </td>
     <td>
       <span>{{ sched.season }}</span>
@@ -28,7 +22,9 @@
     <td>
       <span>{{ sched.ep_number }}</span>
     </td>
-
+    <td>
+      <span>{{ sched.ep_name }}</span>
+    </td>
   </tr>
 </table>
 
