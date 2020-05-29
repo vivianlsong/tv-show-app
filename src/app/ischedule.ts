@@ -1,8 +1,10 @@
 export interface Ischedule {
-  name: string,
-  language:string,
-  channel: string,
+  show_name: string,
+  ep_name: string,
   runtime: number,
   image: string,
-  description:string,
+  description: string,
+  time: string,
+  season: number,
+  ep_number: number
 }

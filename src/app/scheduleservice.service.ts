@@ -10,7 +10,7 @@ interface IScheduleData {
   name: string;
   runtime: number;
   show: {
-    language: string;
+    name: string;
   };
   network: {
     name: string;
@@ -19,6 +19,9 @@ interface IScheduleData {
     medium: string;
   };
   summary: string;
+  airtime: string;
+  season: number;
+  number: number;
 }
 
 @Injectable({
@@ -29,7 +32,7 @@ export class ScheduleService {
   getSchedule(country: string, date: string): Observable<Ischedule[]> {
     return this.httpClient
       .get<IScheduleData[]>(
-        `${environment.baseUrl}api.tvmaze.com/schedule?country=${country}&date=${date}`
+        `${environment.baseUrl}api.tvmaze.com/schedule`
       )
       .pipe(map((data) => this.transformToISchedule(data)));
   }
@@ -37,12 +40,14 @@ export class ScheduleService {
     let result: Ischedule[] = [];
     for (let item of data) {
       let sched: Ischedule = {
-        name: item?.name,
-        language: item?.show?.language,
+        show_name: item?.show?.name,
         runtime: item?.runtime,
-        channel: item?.network?.name,
+        ep_name: item?.name,
         description: item?.summary,
         image: item?.image?.medium,
+        time: item?.airtime,
+        season: item?.season,
+        ep_number: item?.number
       };
       result.push(sched);
     }

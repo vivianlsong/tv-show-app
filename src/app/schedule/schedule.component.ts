@@ -13,7 +13,7 @@ export class ScheduleComponent implements OnInit {
 
   ngOnInit(): void {
     this.scheduleservice
-      .getSchedule('US', '2014-12-01')
+      .getSchedule('US', '2019-12-01')
       .subscribe((data: Ischedule[]) => {
         this.schedules = data || [];
       });
