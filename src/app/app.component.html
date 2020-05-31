@@ -1,37 +1,6 @@
-<body>
-
-  <div style="text-align: center;">
-  <h1>KAV TV App</h1>
-
-  <div class="topnav">
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/shows" routerLinkActive="active">Shows</a>
-    <a routerLink="/people" routerLinkActive="active">People</a>
-    <a routerLink="/schedule" routerLinkActive="active">Schedule</a>
-    <!--<input type="text" placeholder="Search for Shows, Schedule, People" />-->
-
-      <div class="login-container">
-      <form action=" ">
-        <button type="submit">Register</button>
-        <button type="submit">SignIn</button>
-      </form>
-    </div>
-  </div>
+<div fxLayout= "column" fxLayoutAlign="space-around none" style="text-align: center;">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
 
-  <div style = "text-align: center;">
-    <br>
-    <router-outlet></router-outlet>
-  </div>
-
-  <!-- testing routing buttons
-<div fxLayoutAlign="center">
-  <app-show-search></app-show-search>
-</div>
-<div style = "text-align: center;">
-<app-tv-app></app-tv-app>
-<app-peoplesearch></app-peoplesearch>
-</div>
--->
-
-</body>
