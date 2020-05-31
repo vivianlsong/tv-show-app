@@ -1,50 +1,6 @@
-
-<div style="text-align: center;">
-
-  <div>
-    <app-header></app-header>
-  </div><br>
-
-  <div>
-    <br>
-  <app-show-search></app-show-search>
-  </div>
-
-  <app-tv-app></app-tv-app>
-  <app-home></app-home>
+<div fxLayout= "column" fxLayoutAlign="space-around none" style="text-align: center;">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
   <app-footer></app-footer>
-
-
-  <div fxLayoutAlign="center">
-  <div fxLayout = "row">
-    <div fvFlex="300px"></div>
-  </div>
-  </div>
 </div>
 
-<!-- <body>
-
-  <div style="text-align: center;">
-  <h1>KAV TV App</h1>
-
-  <div class="topnav">
-    <a routerLink="/home" routerLinkActive="active">Home</a>
-    <a routerLink="/shows" routerLinkActive="active">Shows</a>
-    <a routerLink="/people" routerLinkActive="active">People</a>
-    <a routerLink="/schedule" routerLinkActive="active">Schedule</a>
-
-      <div class="login-container">
-      <form action=" ">
-        <button type="submit">Register</button>
-        <button type="submit">SignIn</button>
-      </form>
-    </div>
-  </div>
-</div>
-
-  <div style = "text-align: center;">
-    <br>
-    <router-outlet></router-outlet>
-  </div>
-
-</body> -->
