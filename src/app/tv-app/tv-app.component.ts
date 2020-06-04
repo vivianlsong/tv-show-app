@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ITvapp, ITvappcast } from '../itvapp';
-import { TvService } from '../tv.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { ITvappcast } from '../itvapp';
+
 
 @Component({
   selector: 'app-tv-app',
@@ -8,14 +8,7 @@ import { TvService } from '../tv.service';
   styleUrls: ['./tv-app.component.css']
 })
 export class TvAppComponent implements OnInit {
-  current: ITvappcast
-  constructor(private tvappservice: TvService) {
-
-   }
-
-  ngOnInit(): void{
-   //this.tvappservice.getTvapp('westworld').subscribe(data => this.current = data)
-   this.tvappservice.getTvappcast('westworld').subscribe(data => this.current = data)
-  }
+  @Input() current: ITvappcast;
+  ngOnInit(): void{}
 }
 
