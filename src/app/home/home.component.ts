@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private TvService: TvService) { }
   doSearch(searchValue) {
-    const userInput = searchValue.split(' ').map(s => s.trim())
-    this.TvService.getTvapp(userInput[0]).subscribe(data => this.tvshow = data);
+    const userInput = searchValue;
+    this.TvService.getTvapp(userInput).subscribe(data => this.tvshow = data);
   }
   ngOnInit(): void {
   }
