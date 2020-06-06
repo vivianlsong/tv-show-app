@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ITvappcast } from '../itvapp';
-
+import { ITvapp, ITvappcast } from '../itvapp';
 
 @Component({
   selector: 'app-tv-app',
@@ -8,7 +7,8 @@ import { ITvappcast } from '../itvapp';
   styleUrls: ['./tv-app.component.css']
 })
 export class TvAppComponent implements OnInit {
-  @Input() current: ITvappcast;
+  @Input() current: ITvapp;
+  constructor(){}
   ngOnInit(): void{}
 }
 

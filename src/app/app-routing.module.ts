@@ -7,10 +7,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'shows', component: TvAppComponent},
-  {path: 'people', component: PeoplesearchComponent},
+  {path: '', redirectTo: '/shows', pathMatch: 'full'},
+  {path: 'shows', component: HomeComponent},
   {path: 'schedule', component: ScheduleComponent}
 ];
 
