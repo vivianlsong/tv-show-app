@@ -6,8 +6,9 @@
 <link rel="stylesheet" href="./home.component.css">
 </head>
 <body>
-  <app-tv-app></app-tv-app>
-  
+  <app-show-search (searchTvShow)="doSearch($event)"></app-show-search>
+  <app-tv-app [current]="tvshow"></app-tv-app>
+
   <div class="container" style="text-align:center">
 	<img src="assets/images/home_image.png">
   </div>
