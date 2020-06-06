@@ -3,7 +3,6 @@
     <mat-form-field >
       <mat-icon matPrefix>search</mat-icon>
       <input matInput placeholder="Enter the show name" aria-label="Show" [formControl]="search" />
-      <mat-hint style="color:white">Specify a tv show name</mat-hint>
       <mat-error *ngIf="search.invalid">Type 2 or more characters to search</mat-error>
     </mat-form-field>
   </form>
