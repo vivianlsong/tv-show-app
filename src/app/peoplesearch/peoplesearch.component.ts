@@ -17,7 +17,6 @@ export class PeoplesearchComponent implements OnInit {
       .getPeopleSearch('Lauren Weedman')
       .subscribe((data) =>
       {
-      
        this.people = data[0];}
       );
   }

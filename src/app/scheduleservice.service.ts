@@ -8,17 +8,12 @@ import { Observable } from 'rxjs';
 
 interface IScheduleData {
   name: string;
-  runtime: number;
   show: {
     name: string;
   };
   network: {
     name: string;
   };
-  image: {
-    medium: string;
-  };
-  summary: string;
   airtime: string;
   season: number;
   number: number;
@@ -41,10 +36,7 @@ export class ScheduleService {
     for (let item of data) {
       let sched: Ischedule = {
         show_name: item?.show?.name,
-        runtime: item?.runtime,
         ep_name: item?.name,
-        description: item?.summary,
-        image: item?.image?.medium,
         time: item?.airtime,
         season: item?.season,
         ep_number: item?.number

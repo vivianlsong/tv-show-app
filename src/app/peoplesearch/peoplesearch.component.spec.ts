@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PeoplesearchComponent } from './peoplesearch.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('PeoplesearchComponent', () => {
   let component: PeoplesearchComponent;
@@ -8,7 +8,8 @@ describe('PeoplesearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PeoplesearchComponent ]
+      declarations: [ PeoplesearchComponent ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   }));
