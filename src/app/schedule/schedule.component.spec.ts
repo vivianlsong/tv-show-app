@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ScheduleComponent } from './schedule.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('ScheduleComponent', () => {
   let component: ScheduleComponent;
@@ -8,7 +8,8 @@ describe('ScheduleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ScheduleComponent ]
+      declarations: [ ScheduleComponent ],
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   }));
@@ -23,5 +24,3 @@ describe('ScheduleComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
-

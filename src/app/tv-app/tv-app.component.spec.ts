@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TvAppComponent } from './tv-app.component';
 
 describe('TvAppComponent', () => {
