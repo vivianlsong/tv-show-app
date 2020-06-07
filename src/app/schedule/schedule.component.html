@@ -1,19 +1,20 @@
 <h1>Today's Show Schedule</h1>
+<p>{{todayDate | date:'fullDate'}}</p>
 
-<table border="1" align="center">
-  <tr>
-    <td><b>Time</b></td>
-    <td><b>Show Name</b></td>
-    <td><b>Season</b></td>
-    <td><b>Episode</b></td>
-    <td><b>Episode Name</b></td>
+<table class="schedule" border="1" align="center">
+  <tr class="titles">
+    <td>Time</td>
+    <td>Show Name</td>
+    <td>Season</td>
+    <td>Episode</td>
+    <td>Episode Name</td>
   </tr>
 
   <tr *ngFor="let sched of schedules">
     <td>
       <span>{{ sched.time }}</span>
     </td>
-    <td>
+    <td class="show-name">
       <span>{{ sched.show_name }}</span>
     </td>
     <td>
@@ -22,7 +23,7 @@
     <td>
       <span>{{ sched.ep_number }}</span>
     </td>
-    <td>
+    <td class="episode-name">
       <span>{{ sched.ep_name }}</span>
     </td>
   </tr>

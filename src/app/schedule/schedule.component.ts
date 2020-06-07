@@ -8,7 +8,9 @@ import { ScheduleService } from '../scheduleservice.service';
   styleUrls: ['./schedule.component.css'],
 })
 export class ScheduleComponent implements OnInit {
+  todayDate : Date = new Date();
   schedules: Ischedule[];
+
   constructor(private scheduleservice: ScheduleService) {}
 
   ngOnInit(): void {
