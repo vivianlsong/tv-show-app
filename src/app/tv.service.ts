@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ITvapp, ITvappcast } from './itvapp';
-import {map, mergeMap} from 'rxjs/operators';
+import { map, mergeMap } from 'rxjs/operators';
+import { IShowService } from './ishow-service';
 
 interface ITvdata {
   id: number,
@@ -41,7 +42,7 @@ interface ITvdata {
 @Injectable({
   providedIn: 'root'
 })
-export class TvService {
+export class TvService implements IShowService {
 
   constructor(private httpClient: HttpClient) { }
 

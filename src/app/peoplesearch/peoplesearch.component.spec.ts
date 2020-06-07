@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PeoplesearchComponent } from './peoplesearch.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('PeoplesearchComponent', () => {
   let component: PeoplesearchComponent;
@@ -9,7 +9,7 @@ describe('PeoplesearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PeoplesearchComponent ],
-      imports: [HttpClientModule]
+      imports: [HttpClientTestingModule]
     })
     .compileComponents();
   }));
