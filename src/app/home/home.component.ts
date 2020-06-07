@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TvService } from '../tv.service';
-import { ITvapp} from '../itvapp';
+import { ITvapp, ITvappcast} from '../itvapp';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +8,12 @@ import { ITvapp} from '../itvapp';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  tvshow: ITvapp;
+  tvshow: ITvappcast;
 
-  constructor(private TvService: TvService) { }
+  constructor(private tvService: TvService) { }
   doSearch(searchValue) {
     const userInput = searchValue;
-    this.TvService.getTvapp(userInput).subscribe(data => this.tvshow = data);
+    this.tvService.getTvappcast(userInput).subscribe(data => this.tvshow = data);
   }
   ngOnInit(): void {
   }
