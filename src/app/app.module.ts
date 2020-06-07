@@ -35,7 +35,8 @@ const routes: Routes = [];
     ShowSearchComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+
   ],
   imports: [
     BrowserModule,

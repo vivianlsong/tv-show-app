@@ -1,0 +1,22 @@
+p {
+  font-size: 1.35em;
+}
+
+.schedule{
+  table-layout: auto;
+  width: 50%;
+}
+
+.titles{
+  font-weight: bold;
+}
+
+.show-name{
+  text-align: left;
+  padding-left: 15px;
+}
+
+.episode-name{
+  text-align: left;
+  padding-left: 15px;
+}
